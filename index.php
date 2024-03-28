@@ -1,9 +1,9 @@
 <?php 
   
-$servername = "192.168.3.5"; 
+$servername = "192.168.3.5:3306"; 
 $username = "root"; 
 $password = "Admin123!"; 
-$dbName = "geeksDatabase"; 
+$dbName = "New_schema"; 
   
 try { 
   
