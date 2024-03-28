@@ -1,14 +1,9 @@
 <?php
-$servername = "192.168.5.10";
-$username = "sebastian";
-$password = "Admin123!";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+try {
+    $pdo = new PDO('mysql:host=mysql;dbname=ijdb;charset=utf8mb4', 'ijdbuser', 'mypassword');
+    $output = 'Database connection established.';
+} catch (PDOException $e) {
+    $output = 'Unable to connect to the database server: ' . $e->getMessage();
 }
-echo "Connected successfully";
-?>
+
+include  __DIR__ . '/../templates/output.html.php';
