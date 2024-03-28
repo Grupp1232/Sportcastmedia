@@ -1,9 +1,14 @@
 <?php
-try {
-    $pdo = new PDO('mysql:host=192.168.5.10;db=new_schema;charset=utf8mb4', 'Sebastian', 'Admin123!');
-    $output = 'Database connection established.';
-} catch (PDOException $e) {
-    $output = 'Unable to connect to the database server: ' . $e->getMessage();
-}
+$servername = "192.168.3.5";
+$username = "root";
+$password = "Admin123!";
 
-include  __DIR__ . '/../public_html/output.html.php';
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?>
