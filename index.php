@@ -1,7 +1,7 @@
 <?php 
   
 $servername = "192.168.3.5:3306"; 
-$username = "root"; 
+$username = "sebastian"; 
 $password = "Admin123!"; 
 $dbName = "New_schema"; 
   
