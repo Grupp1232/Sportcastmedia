@@ -1,24 +1,29 @@
 <?php 
   
-$servername = "192.168.3.5"; 
-$username = "sebastian"; 
+$servername = "192,168.3.5"; 
+$username = "root"; 
 $password = "Admin123!"; 
-$dbName = "new_schema"; 
+$dbName = "geeksDatabase"; 
   
-// Creating connection 
-$conn = mysqli_connect($servername,  
-         $username, $password, $dbName); 
+try { 
   
-// Checking connection 
-if (!$conn) { 
+    // Creating the connection 
+    $conn = new PDO("mysql:host=$servername;dbname=$dbName",  
+                    $username, $password); 
+    
+    // Setting the PDO error mode to exception 
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+    echo "Connection established successfully..."; 
+    
+    // To close the connection 
+    $conn = null; 
+}  
   
-      // If connecting fails 
-    die("Connection failed: " . mysqli_connect_error()); 
+// If connection fails  
+catch(PDOException $e) { 
+  
+      // Throws the error message  
+    echo "Connection failed: " . $e->getMessage(); 
 } 
-  
-echo "Connection established successfully..."; 
-  
-// Close the connection   
-mysqli_close($conn); 
   
 ?>
