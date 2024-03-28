@@ -6,5 +6,5 @@ try {
     $output = 'Unable to connect to the database server: ' . $e->getMessage();
 }
 
-include  __DIR__ . '/../public/output.html.php';
+include  __DIR__ . '/../templates/output.html.php';
 
