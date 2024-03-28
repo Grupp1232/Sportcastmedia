@@ -1,29 +1,9 @@
-<?php 
-  
-$servername = "192.168.3.5:3306"; 
-$username = "sebastian"; 
-$password = "Admin123!"; 
-$dbName = "New_schema"; 
-  
-try { 
-  
-    // Creating the connection 
-    $conn = new PDO("mysql:host=$servername;dbname=$dbName",  
-                    $username, $password); 
-    
-    // Setting the PDO error mode to exception 
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-    echo "Connection established successfully..."; 
-    
-    // To close the connection 
-    $conn = null; 
-}  
-  
-// If connection fails  
-catch(PDOException $e) { 
-  
-      // Throws the error message  
-    echo "Connection failed: " . $e->getMessage(); 
-} 
-  
-?>
+<?php
+try {
+    $pdo = new PDO('mysql:host=192.168.3.5;dbname=New_schema;charset=utf8mb4', 'sebastian', 'Admin123!');
+    $output = 'Database connection established.';
+} catch (PDOException $e) {
+    $output = 'Unable to connect to the database server: ' . $e->getMessage();
+}
+
+include  __DIR__ . '/../templates/output.html.php';
