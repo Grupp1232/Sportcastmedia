@@ -1,11 +1,49 @@
 <?php
+function loadTemplate($templateFileName, $variables = []) {
+    extract($variables);
 
-$title = 'Internet Joke Database';
+    ob_start();
+    include  __DIR__ . '/../public_html/templates/' . $templateFileName;
 
-ob_start();
+    return ob_get_clean();
+}
 
-include  __DIR__ . '/../public_html/home.html.php';
+try {
+    include __DIR__ . '/../public_html/includes/DatabaseConnection.php';
+    include __DIR__ . '/../public_html/classes/DatabaseTable.php';
+    include __DIR__ . '/../public_html/controllers/JokeController.php';
+    include __DIR__ . '/../public_html/controllers/AuthorController.php';
 
-$output = ob_get_clean();
+    $jokesTable = new DatabaseTable($pdo, 'joke', 'id');
+    $authorsTable = new DatabaseTable($pdo, 'author', 'id');
 
-include  __DIR__ . '/../public_html/layout.html.php';
+    $action = $_GET['action'] ?? 'home';
+    $controllerName = $_GET['controller'] ?? 'joke';
+
+    if ($controllerName === 'joke') {
+        $controller = new JokeController($jokesTable, $authorsTable);
+    }
+    else if ($controllerName === 'author') {
+        $controller = new AuthorController($authorsTable);
+    }
+
+    if ($action == strtolower($action) && $controllerName == strtolower($controllerName)) {
+        $page = $controller->$action();
+    } else {
+        http_response_code(301);
+        header('location: index.php?controller=' . strtolower($controllerName) .'&action=' . strtolower($action));
+    }
+
+    $title = $page['title'];
+
+    $variables = $page['variables'] ?? [];
+    $output = loadTemplate($page['template'], $variables);
+    
+} catch (PDOException $e) {
+    $title = 'An error has occurred';
+
+    $output = 'Database error: ' . $e->getMessage() . ' in ' .
+    $e->getFile() . ':' . $e->getLine();
+}
+
+include  __DIR__ . '/../public_html/templates/layout.html.php';
