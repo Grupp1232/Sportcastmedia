@@ -13,7 +13,7 @@
   <nav>
     <ul>
       <li><a href="index.php">Home</a></li>
-      <li><a href="jokes.php">Jokes List</a></li>
+      <li><a href="jokes.html.php">Jokes List</a></li>
     </ul>
   </nav>
 
