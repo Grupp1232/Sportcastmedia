@@ -21,7 +21,7 @@ if (isset($_POST['joketext'])) {
     $e->getFile() . ':' . $e->getLine();
     }
 } else {
-    $title = 'Add a new joke';
+    $title = 'Add News';
 
     ob_start();
 
