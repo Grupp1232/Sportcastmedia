@@ -6,7 +6,7 @@ try {
 
   $jokes = $pdo->query($sql);
 
-  $title = 'Joke list';
+  $title = 'News';
 
   ob_start();
 
