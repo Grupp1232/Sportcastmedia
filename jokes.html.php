@@ -3,7 +3,7 @@
   <p>
   <?=htmlspecialchars($news['newstext'], ENT_QUOTES, 'UTF-8')?>
   <form action="deletejoke.php" method="post">
-    <input type="hidden" name="id" value="<?=$joke['id']?>">
+    <input type="hidden" name="id" value="<?=$news['id']?>">
     <input type="submit" value="Delete">
   </form>
   </p>
