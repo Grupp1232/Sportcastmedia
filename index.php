@@ -3,7 +3,10 @@ function loadTemplate($templateFileName, $variables = []) {
     extract($variables);
 
     ob_start();
-    include  __DIR__ . '/../public_html/' . $templateFileName;
+    include  __DIR__ . '/../public_html/editjoke.html.php';
+    include  __DIR__ . '/../public_html/home.html.php';
+    include  __DIR__ . '/../public_html/jokes.html.php';
+    include  __DIR__ . '/../public_html/layout.html.php';
 
     return ob_get_clean();
 }
