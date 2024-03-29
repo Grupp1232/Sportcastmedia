@@ -3,16 +3,16 @@ function loadTemplate($templateFileName, $variables = []) {
     extract($variables);
 
     ob_start();
-    include  __DIR__ . '/../public_html/templates/' . $templateFileName;
+    include  __DIR__ . '/../public_html/' . $templateFileName;
 
     return ob_get_clean();
 }
 
 try {
-    include __DIR__ . '/../includes/DatabaseConnection.php';
-    include __DIR__ . '/../classes/DatabaseTable.php';
-    include __DIR__ . '/..controllers/JokeController.php';
-    include __DIR__ . '/../controllers/AuthorController.php';
+    include __DIR__ . '/../public_html/DatabaseConnection.php';
+    include __DIR__ . '/../public_html/DatabaseTable.php';
+    include __DIR__ . '/..public_html/JokeController.php';
+    include __DIR__ . '/../public_html/AuthorController.php';
 
     $jokesTable = new DatabaseTable($pdo, 'joke', 'id');
     $authorsTable = new DatabaseTable($pdo, 'author', 'id');
@@ -46,4 +46,4 @@ try {
     $e->getFile() . ':' . $e->getLine();
 }
 
-include  __DIR__ . '/../templates/layout.html.php';
+include  __DIR__ . '/../public_html/layout.html.php';
