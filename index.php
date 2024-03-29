@@ -9,10 +9,10 @@ function loadTemplate($templateFileName, $variables = []) {
 }
 
 try {
-    include __DIR__ . '/../public_html/includes/DatabaseConnection.php';
-    include __DIR__ . '/../public_html/classes/DatabaseTable.php';
-    include __DIR__ . '/../public_html/controllers/JokeController.php';
-    include __DIR__ . '/../public_html/controllers/AuthorController.php';
+    include __DIR__ . '/../includes/DatabaseConnection.php';
+    include __DIR__ . '/../classes/DatabaseTable.php';
+    include __DIR__ . '/..controllers/JokeController.php';
+    include __DIR__ . '/../controllers/AuthorController.php';
 
     $jokesTable = new DatabaseTable($pdo, 'joke', 'id');
     $authorsTable = new DatabaseTable($pdo, 'author', 'id');
@@ -46,4 +46,4 @@ try {
     $e->getFile() . ':' . $e->getLine();
 }
 
-include  __DIR__ . '/../public_html/templates/layout.html.php';
+include  __DIR__ . '/../templates/layout.html.php';
