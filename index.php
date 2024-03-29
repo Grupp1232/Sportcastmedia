@@ -8,9 +8,23 @@ try {
     while ($row = $result->fetch()) {
         $jokes[] = $row['joketext'];
     }
+
+    $title = 'Joke list';
+
+    $output = '';
+
+    foreach ($jokes as $joke) {
+        $output .= '<blockquote>';
+        $output .= '<p>';
+        $output .= $joke;
+        $output .= '</p>';
+        $output .= '</blockquote>';
+    }
 } catch (PDOException $e) {
-    $error = 'Unable to connect to the database server: ' . $e->getMessage() . ' in ' .
+    $title = 'An error has occurred';
+
+    $output = 'Database error: ' . $e->getMessage() . ' in ' .
   $e->getFile() . ':' . $e->getLine();
 }
 
-include  __DIR__ . '/../public_html/output.html.php';
+include  __DIR__ . '/../public_html/layout.html.php';
