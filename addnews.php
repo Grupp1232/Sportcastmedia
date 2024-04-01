@@ -13,7 +13,7 @@ if (isset($_POST['joketext'])) {
 
         $stmt->execute();
 
-        header('location: jokes.php');
+        header('location: news.php');
     } catch (PDOException $e) {
         $title = 'An error has occurred';
 
@@ -25,7 +25,7 @@ if (isset($_POST['joketext'])) {
 
     ob_start();
 
-    include  __DIR__ . '/../public_html/addjoke.html.php';
+    include  __DIR__ . '/../public_html/addnews.html.php';
 
     $output = ob_get_clean();
 }
