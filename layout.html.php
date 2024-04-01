@@ -22,7 +22,7 @@
   </main>
 
   <footer>
-  &copy; IJDB 2021
+  &copy; Sportcastmedia 2024
   </footer>
   </body>
 </html>
