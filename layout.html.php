@@ -12,8 +12,8 @@
     </header>
     <ul>
       <li><a href="index.php">Home</a></li>
-      <li><a href="jokes.php">News</a></li>
-      <li><a href="addjoke.php">Add News</a></li>
+      <li><a href="news.php">News</a></li>
+      <li><a href="addnews.php">Add News</a></li>
     </ul>
   </nav>
 
