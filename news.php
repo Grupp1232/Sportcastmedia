@@ -4,7 +4,7 @@ try {
 
   $sql = 'SELECT `newstext`, `id` FROM news';
 
-  $jokes = $pdo->query($sql);
+  $news = $pdo->query($sql);
 
   $title = 'News';
 
