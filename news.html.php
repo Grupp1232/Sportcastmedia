@@ -1,9 +1,9 @@
-<?php foreach ($jokes as $joke): ?>
+<?php foreach ($news as $news): ?>
 <blockquote>
   <p>
-  <?=htmlspecialchars($joke['joketext'], ENT_QUOTES, 'UTF-8')?>
-  <form action="deletejoke.php" method="post">
-    <input type="hidden" name="id" value="<?=$joke['id']?>">
+  <?=htmlspecialchars($news['newstext'], ENT_QUOTES, 'UTF-8')?>
+  <form action="deletenews.php" method="post">
+    <input type="hidden" name="id" value="<?=$news['id']?>">
     <input type="submit" value="Delete">
   </form>
   </p>
