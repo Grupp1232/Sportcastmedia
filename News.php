@@ -10,7 +10,7 @@ try {
 
   ob_start();
 
-  include  __DIR__ . '/../public_html/jokes.html.php';
+  include  __DIR__ . '/../public_html/news.html.php';
 
   $output = ob_get_clean();
 }
