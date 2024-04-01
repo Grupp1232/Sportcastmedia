@@ -1,19 +1,19 @@
 <?php
-if (isset($_POST['joketext'])) {
+if (isset($_POST['newstext'])) {
     try {
         $pdo = new PDO('mysql:host=192.168.5.10:3306;dbname=new_schema;charset=utf8mb4', 'sebastian', 'Admin123!');
 
- $sql = 'INSERT INTO `joke` SET
-      `joketext` = :joketext,
-      `jokedate` = CURDATE()';
+ $sql = 'INSERT INTO `news` SET
+      `newstext` = :newstext,
+      `newsdate` = CURDATE()';
 
         $stmt = $pdo->prepare($sql);
 
-        $stmt->bindValue(':joketext', $_POST['joketext']);
+        $stmt->bindValue(':newstext', $_POST['newstext']);
 
         $stmt->execute();
 
-        header('location: jokes.php');
+        header('location: news.php');
     } catch (PDOException $e) {
         $title = 'An error has occurred';
 
@@ -25,7 +25,7 @@ if (isset($_POST['joketext'])) {
 
     ob_start();
 
-    include  __DIR__ . '/../public_html/addjoke.html.php';
+    include  __DIR__ . '/../public_html/addnews.html.php';
 
     $output = ob_get_clean();
 }

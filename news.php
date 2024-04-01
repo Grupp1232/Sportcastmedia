@@ -2,15 +2,15 @@
 try {
   $pdo = new PDO('mysql:host=192.168.5.10:3306;dbname=new_schema;charset=utf8mb4', 'sebastian', 'Admin123!');
 
-  $sql = 'SELECT `joketext`, `id` FROM joke';
+  $sql = 'SELECT `newstext`, `id` FROM news';
 
-  $jokes = $pdo->query($sql);
+  $news = $pdo->query($sql);
 
   $title = 'News';
 
   ob_start();
 
-  include  __DIR__ . '/../public_html/jokes.html.php';
+  include  __DIR__ . '/../public_html/news.html.php';
 
   $output = ob_get_clean();
 }

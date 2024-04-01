@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="jokes.css">
+    <link rel="stylesheet" href="news.css">
     <title><?=$title?></title>
   </head>
   <body>
@@ -12,8 +12,8 @@
     </header>
     <ul>
       <li><a href="index.php">Home</a></li>
-      <li><a href="jokes.php">News</a></li>
-      <li><a href="addjoke.php">Add News</a></li>
+      <li><a href="news.php">News</a></li>
+      <li><a href="addnews.php">Add News</a></li>
     </ul>
   </nav>
 
@@ -22,7 +22,7 @@
   </main>
 
   <footer>
-  &copy; IJDB 2021
+  &copy; Sportcastmedia 2024
   </footer>
   </body>
 </html>
