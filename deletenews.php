@@ -9,7 +9,7 @@ try {
   $stmt->bindValue(':id', $_POST['id']);
   $stmt->execute();
 
-  header('location: jokes.php');
+  header('location: news.php');
 }
 catch (PDOException $e) {
   $title = 'An error has occurred';
