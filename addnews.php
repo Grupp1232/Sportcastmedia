@@ -3,13 +3,13 @@ if (isset($_POST['joketext'])) {
     try {
         $pdo = new PDO('mysql:host=192.168.5.10:3306;dbname=new_schema;charset=utf8mb4', 'sebastian', 'Admin123!');
 
- $sql = 'INSERT INTO `joke` SET
-      `joketext` = :joketext,
-      `jokedate` = CURDATE()';
+ $sql = 'INSERT INTO `news` SET
+      `newstext` = :joketext,
+      `newsdate` = CURDATE()';
 
         $stmt = $pdo->prepare($sql);
 
-        $stmt->bindValue(':joketext', $_POST['joketext']);
+        $stmt->bindValue(':newstext', $_POST['newstext']);
 
         $stmt->execute();
 
