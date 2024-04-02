@@ -1,8 +1,3 @@
-
-To make the news section look better, you can add some CSS styling to improve its appearance. Here's an example of how you can style it:
-
-html
-Copy code
 <style>
   /* Style for News Section */
   h2 {
