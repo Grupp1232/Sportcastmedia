@@ -10,6 +10,7 @@ if (isset($_POST['newstext'])) {
         $stmt = $pdo->prepare($sql);
 
         $stmt->bindValue(':newstext', $_POST['newstext']);
+        $stmt->bindValue(':newsdate', $_POST['newsdate']);
 
         $stmt->execute();
 
