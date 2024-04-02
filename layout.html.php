@@ -22,15 +22,6 @@
   </main>
 
   <footer>
-
-
-
-
-
-
-
-
-    
   &copy; Sportcastmedia 2024
   </footer>
   </body>
