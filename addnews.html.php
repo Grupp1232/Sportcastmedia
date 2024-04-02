@@ -15,7 +15,7 @@
     }
 
     header {
-      background-color: #ffffff;
+      background-color: #333;
       color: #fff;
       text-align: center;
       padding: 20px 0;
@@ -23,7 +23,7 @@
 
     h2 {
       font-size: 24px;
-      color: #333;
+      color: ##ffffff;
       text-align: center;
       margin-bottom: 30px;
     }
