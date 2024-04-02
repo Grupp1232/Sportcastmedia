@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sportcastmedia News Database</title>
   <style>
-    /* General Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -15,7 +14,6 @@
       line-height: 1.6;
     }
 
-    /* Header Styles */
     header {
       background-color: #333;
       color: #fff;
@@ -24,31 +22,20 @@
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    /* Main Content Styles */
     .container {
       max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
+      margin: 20px auto;
+      padding: 0 20px;
     }
 
-    /* Footer Styles */
     footer {
       background-color: #333;
       color: #fff;
       text-align: center;
       padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
     }
   </style>
 </head>
