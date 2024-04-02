@@ -15,7 +15,7 @@
     }
 
     header {
-      background-color: #333;
+      background-color: #ffffff;
       color: #fff;
       text-align: center;
       padding: 20px 0;
