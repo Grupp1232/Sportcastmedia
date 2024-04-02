@@ -32,6 +32,7 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 0 20px;
+      text-align: center; /* Center align content */
     }
 
     form {
@@ -40,6 +41,7 @@
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 20px;
+      display: inline-block; /* Ensure form wraps around content */
     }
 
     label {
