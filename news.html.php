@@ -1,6 +1,6 @@
 <h2>News:</h2>
 <?php foreach ($news as $newz): ?>
-<blockquote>
+<table>
   <p>
   <?=htmlspecialchars($newz['newsdate'], ENT_QUOTES, 'UTF-8')?>
   --
@@ -10,5 +10,5 @@
     <input type="submit" value="Delete">
   </form>
   </p>
-</blockquote>
+</table>
 <?php endforeach; ?>
