@@ -1,4 +1,4 @@
-<p>News<p>
+<h1>News:</h1>
 <?php foreach ($news as $newz): ?>
 <blockquote>
   <p>
