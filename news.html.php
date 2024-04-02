@@ -1,4 +1,3 @@
-User
 <h2>News:</h2>
 <?php foreach ($news as $newz): ?>
 <blockquote>
