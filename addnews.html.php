@@ -49,7 +49,7 @@
     }
 
     textarea {
-      width: 110%;
+      width: 90%;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
