@@ -54,6 +54,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       resize: vertical;
+      height: 200px; /* Adjust height as needed */
     }
 
     input[type="submit"] {
@@ -80,7 +81,7 @@
   <div class="container">
     <form action="" method="post">
       <label for="newstext">Type your news here:</label>
-      <textarea id="newstext" name="newstext" rows="6" cols="80"></textarea>
+      <textarea id="newstext" name="newstext" rows="10" cols="80"></textarea> <!-- Adjusted rows -->
       <input type="submit" name="submit" value="Add">
     </form>
   </div>
