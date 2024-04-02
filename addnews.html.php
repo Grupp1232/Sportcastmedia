@@ -61,7 +61,7 @@
       background-color: #007bff;
       color: #fff;
       border: none;
-      padding: 10px 50px;
+      padding: 10px 150px;
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
