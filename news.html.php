@@ -1,8 +1,8 @@
 <?php foreach ($news as $newz): ?>
 <blockquote>
   <p>
-  News:
   <?=htmlspecialchars($newz['newsdate'], ENT_QUOTES, 'UTF-8')?>
+  --
   <?=htmlspecialchars($newz['newstext'], ENT_QUOTES, 'UTF-8')?>
   <form action="deletenews.php" method="post">
     <input type="hidden" name="id" value="<?=$newz['id']?>">
