@@ -1,8 +1,6 @@
 <?php foreach ($news as $newz): ?>
 <blockquote>
   <p>
-  <?=htmlspecialchars($newz['id'], ENT_QUOTES, 'UTF-8')?>
-  --
   <?=htmlspecialchars($newz['newsdate'], ENT_QUOTES, 'UTF-8')?>
   --
   <?=htmlspecialchars($newz['newstext'], ENT_QUOTES, 'UTF-8')?>
