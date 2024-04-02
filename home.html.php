@@ -31,12 +31,6 @@
       padding: 0 20px;
     }
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 0;
-    }
   </style>
 </head>
 <body>
